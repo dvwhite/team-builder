@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Form from './components/Form';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         setTeamMembers={setTeamMembers}/>
       {
         teamMembers.map(person => (
-          <div>
+          <div className="card">
             <p>Name: {person.name}</p>
             <p>Email: {person.email}</p>
             <p>Role: {person.role}</p>

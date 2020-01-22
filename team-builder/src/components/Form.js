@@ -11,14 +11,13 @@ const Form = (props) => {
   const handleSubmit = event => {
     event.preventDefault();
     setTeamMembers([...teamMembers, teamMember]);
-    console.log(teamMembers)
     setTeamMember({'name': "", 'email': "", 'role': ""});
   }
 
   return (
     <form onSubmit={event => handleSubmit(event)}>
       <label>
-        Name:
+        Name: 
         <input
           type="text"
           name="name"
@@ -27,7 +26,7 @@ const Form = (props) => {
         />
       </label>
       <label>
-        Email:
+        Email: 
         <input
           type="text"
           name="email"
@@ -36,7 +35,7 @@ const Form = (props) => {
         />
       </label>
       <label>
-        Role:
+        Role: 
         <input
           type="text"
           name="role"
