@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const Form = ({teamMemberState}) => {
+const Form = (props) => {
   const [teamMember, setTeamMember] = useState({'name': "", 'email': "", 'role': ""});
-  const {teamMembers, setTeamMembers} = teamMemberState;
+  const {teamMembers, setTeamMembers} = props;
 
   const handleChange = event => {
     setTeamMember({...teamMember, [event.target.name]: event.target.value })
@@ -10,7 +10,7 @@ const Form = ({teamMemberState}) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    setTeamMembers([teamMember]);
+    setTeamMembers([...teamMembers, teamMember]);
     console.log(teamMembers)
     setTeamMember({'name': "", 'email': "", 'role': ""});
   }

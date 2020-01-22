@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <Form 
-        teamMemberState={teamMembers}
-        setTeamMemberState={setTeamMembers}/>
+        teamMembers={teamMembers}
+        setTeamMembers={setTeamMembers}/>
       {
         teamMembers.map(person => (
           <div>
