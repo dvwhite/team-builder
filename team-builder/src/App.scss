@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -34,5 +38,33 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.form-container {
+  background: lightgoldenrodyellow;
+}
+form {
+  margin: 2% 0% 1% 0%;
+  padding: 2%;
+  background: lightgoldenrodyellow;
+  border-radius: 15px;
+  box-shadow: 1px 1px 2px black;
+
+  label {
+    padding-right: 20px;
+  }
+}
+
+.card {
+  background-color: lightsteelblue;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid gray;
+  margin: 0.5%;
+  width: 25%;
+  box-shadow: 2px 2px 4px black;
+
+  &:hover {
+    background-color: dodgerblue;
   }
 }
