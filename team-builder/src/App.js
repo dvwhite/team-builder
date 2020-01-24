@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import Form from './components/Form';
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([]);
+  const [memberToEdit, setMemberToEdit] = useState(null);
 
   return (
     <div className="App">
       <Form 
         teamMembers={teamMembers}
-        setTeamMembers={setTeamMembers}/>
+        setTeamMembers={setTeamMembers}
+        setMemberToEdit={setMemberToEdit}
+      />
       {
         teamMembers.map(person => (
           <div className="card">
