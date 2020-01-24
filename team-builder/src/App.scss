@@ -68,3 +68,11 @@ form {
     background-color: dodgerblue;
   }
 }
+
+input[type=text] {
+  border: 1px solid black;
+  
+  &:focus {
+    border: 2px solid dodgerblue;
+  }
+}
